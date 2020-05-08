@@ -11,6 +11,9 @@ int main()
     double imposto_salario;
     double imposto_prestacao_de_servico;
     double imposto_ganho_de_capital;
+    double imposto_total;
+    double maximo_dedutivel;
+    double gastos_dedutiveis;
 
     printf("Renda anual com salario: ");
     scanf("%lf", &salario);
@@ -48,6 +51,17 @@ int main()
     printf("Imposto sobre salario: %.2lf\n", imposto_salario);
     printf("Imposto sobre serviços: %.2lf\n", imposto_prestacao_de_servico);
     printf("Imposto sobre ganho de capital: %.2lf\n", imposto_ganho_de_capital);
+
+    imposto_total = imposto_salario + imposto_prestacao_de_servico + imposto_ganho_de_capital;
+
+    maximo_dedutivel = imposto_total * 0.3;
+    gastos_dedutiveis = gastos_medicos + gastos_educacionais;
+
+    printf("\n");
+    printf("DEDUCOES:\n");
+
+    printf("Maximo dedutivel: %.2lf\n", maximo_dedutivel);
+    printf("Gastos dedutiveis: %.2lf\n", gastos_dedutiveis);
 
     return 0;
 }
